@@ -3111,10 +3111,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if(message.content.includes('a7a')) {
+    if(message.content.includes('kosmk,a7a')) {
         message.delete();
         message.reply('لا تسب مره ثانيه!');
     }
 });
+
+
 
 client.login(process.env.BOT_TOKEN)
