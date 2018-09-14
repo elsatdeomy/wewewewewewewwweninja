@@ -3285,8 +3285,8 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 client.on('message', ALPHACODES => { 
   var sender = ALPHACODES.author
   if(!ALPHACODES.guild) return
-  onoff: 'Off',
-}
+  onoff: 'Off', 
+	  
         if(ALPHACODES.content.startsWith(prefix + `set-wlc`)) {        
         let perms = ALPHACODES.member.hasPermission(`MANAGE_CHANNELS`)
         if(!perms) return ALPHACODES.channel.send('**You need `Manage Channels` permission**')
