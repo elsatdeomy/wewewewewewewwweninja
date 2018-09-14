@@ -3282,6 +3282,7 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 }
 });
 
+let sw = JSON.parse(fs.readFileSync("./setwlc.json", "utf8"));
 client.on('message', ALPHACODES => { 
   var sender = ALPHACODES.author
   if(!ALPHACODES.guild) return
