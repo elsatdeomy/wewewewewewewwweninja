@@ -3286,7 +3286,6 @@ client.on('message', ALPHACODES => {
   var sender = ALPHACODES.author
   if(!ALPHACODES.guild) return
   onoff: 'Off',
-  msk:   'Welcome'
 }
         if(ALPHACODES.content.startsWith(prefix + `set-wlc`)) {        
         let perms = ALPHACODES.member.hasPermission(`MANAGE_CHANNELS`)
