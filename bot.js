@@ -3286,7 +3286,6 @@ client.on('message', ALPHACODES => {
   var sender = ALPHACODES.author
   if(!ALPHACODES.guild) return
   onoff: 'Off',
-  ch:    'Welcome',
   msk:   'Welcome'
 }
         if(ALPHACODES.content.startsWith(prefix + `set-wlc`)) {        
