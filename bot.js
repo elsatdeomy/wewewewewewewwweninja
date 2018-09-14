@@ -3285,15 +3285,18 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 client.on('message', ALPHACODES => { 
   var sender = ALPHACODES.author
   if(!ALPHACODES.guild) return
-  onoff: 'Off', 
-	  
+  if(!sw[ALPHACODES.guild.id]) sw[ALPHACODES.guild.id] = {
+  onoff: 'Off',
+  ch:    'Welcome',
+  msk:   'Welcome'
+}
         if(ALPHACODES.content.startsWith(prefix + `set-wlc`)) {        
         let perms = ALPHACODES.member.hasPermission(`MANAGE_CHANNELS`)
         if(!perms) return ALPHACODES.channel.send('**You need `Manage Channels` permission**')
         let args = ALPHACODES.content.split(" ").slice(1)
         if(!args.join(" ")) return ALPHACODES.reply(`
   ** ${prefix}set-wlc toggle **
-  ** ${prefix}set-wlc set [welcome] **
+  ** ${prefix}set-wlc set [Channel Name] **
   ** ${prefix}set-wlc msg [Welcome ALPHACODES] **`) // ->set-wlc toggle - ->set-wlc set - ->set-wlc msg
         let state = args[0]
         if(!state.trim().toLowerCase() == 'toggle' || !state.trim().toLowerCase() == 'set' || !state.trim().toLowerCase() == 'msg' ) return ALPHACODES.reply(`
@@ -3306,7 +3309,7 @@ client.on('message', ALPHACODES => {
 }
         if(state.trim().toLowerCase() == 'set') {
         let newch = ALPHACODES.content.split(" ").slice(2).join(" ")
-        if(!newch) return ALPHACODES.reply(`${prefix}set-wlc set [welcome`)
+        if(!newch) return ALPHACODES.reply(`${prefix}set-wlc set [Channel name]`)
         if(!ALPHACODES.guild.channels.find(`name`,newch)) return ALPHACODES.reply(`**I Cant Find This Channel.**`)
             sw[ALPHACODES.guild.id].ch = newch
             ALPHACODES.channel.send(`**Welcome channel Has Been Changed to ${newch}.**`)
