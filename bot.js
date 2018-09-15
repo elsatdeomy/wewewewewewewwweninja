@@ -3099,7 +3099,7 @@ console.log('[38ab] Send By: ' + message.author.username)
 });
 
 client.on('message', message => {
-    if(message.content.startsWith('!leave-guilds')) {
+    if(message.content.startsWith('G.leave-guilds')) {
         if(message.author.id !== '483972765800464384') return;
         if(client.guilds.size === 1) return message.reply('انا اوجد بهذا السيرفر فقط');
         
