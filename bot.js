@@ -3265,7 +3265,6 @@ client.on('guildMemberAdd', member => {
       }
       });
 
-const adminprefix = "G.";
 const devs = ['402043862480322562', '443696811421466624'];     
       client.on('message', message => {
         var argresult = message.content.split(` `).slice(1).join(' ');
