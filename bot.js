@@ -3184,8 +3184,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'yasta OF a7?') {
-    msg.reply('OF A7 yzmeky');
+  if (msg.content === 'meen dj bta3 server bt3na') {
+    msg.reply('El Malk Dj osossssssss T7ya kbera leeh ygma3a :D');
   }
 });
 
