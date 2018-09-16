@@ -3299,8 +3299,6 @@ client.on('message', function(message) {
     }
 });
 
-```js
-//welcome
 client.on('guildMemberAdd', member => {
   if (member.bot) {
     let guild = member.guild;
