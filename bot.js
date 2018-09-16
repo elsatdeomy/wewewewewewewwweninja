@@ -3191,7 +3191,7 @@ client.on('message', msg => {
 
 client.on('guildMemberAdd', member => {
    
-     const welcomer =  member.guild.channels.find('name', 'general');
+     const welcomer =  member.guild.channels.find('name', '𝐜𝐡𝐚𝐭');
     if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -3297,6 +3297,49 @@ client.on('message', function(message) {
             .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
         client.channels.get("489956925748805647").send({ embed: stewart });
     }
+});
+
+```js
+//welcome
+client.on('guildMemberAdd', member => {
+  if (member.bot) {
+    let guild = member.guild;
+    const embed = new Discord.RichEmbed()
+    .setColor('#01DFD7')
+    .setTimestamp()
+    .addField('Bot Joined',
+      `${member.user} Bot Joined. :wave:  `)
+    client.channels.find("name", "𝐜𝐡𝐚𝐭").sendEmbed(embed); 
+  } else {
+
+  let guild = member.guild;
+  const embed = new Discord.RichEmbed()
+  .setColor(0xFF0000)
+  .setTimestamp()
+  .addField('Member Joined',
+    `${member.user} has joined! Welcome To ${guild.name} ! `)
+  client.channels.find("name", "𝐜𝐡𝐚𝐭").sendEmbed(embed); 
+}
+})
+client.on('guildMemberRemove', member => {
+  if (member.bot) {
+    let guild = member.guild;
+    const embed = new Discord.RichEmbed()
+    .setColor(0xFF0000)
+    .setTimestamp()
+    .addField('Bot Leave',
+      `${member.user} Bot leave. :wave: !`)
+    client.channels.find("name", "𝐜𝐡𝐚𝐭").sendEmbed(embed); 
+  } else {
+
+  let guild = member.guild;
+  const embed = new Discord.RichEmbed()
+  .setColor(0xFF0000)
+  .setTimestamp()
+  .addField('Member Leave',
+    `${member.user} has leave :wave: !`)
+  client.channels.find("name", "𝐜𝐡𝐚𝐭").sendEmbed(embed); 
+}
 });
 
 client.login(process.env.BOT_TOKEN)
