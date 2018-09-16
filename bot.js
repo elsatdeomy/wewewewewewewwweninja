@@ -3420,4 +3420,17 @@ mentionned.send(`:credit_card: | Transfer Receipt \`\`\`\`You have received ${ar
 }
 });
 
+client.on('message', message => {
+     if (message.content === "-ping") {
+      const embed = new Discord.RichEmbed()
+ 
+  .setColor("#FF0000")
+  .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
+                 .setFooter(` Premium Bot
+ .`, 'https://aladdintravel.com/wp-content/uploads/2014/11/pinterest-logo-2-1074x1067.png')
+
+  message.channel.sendEmbed(embed);
+    }
+});
+
 client.login(process.env.BOT_TOKEN)
