@@ -3438,8 +3438,7 @@ client.on('message',  (message) => {
         if(message.content.startsWith('G.boom')) {
   let user = message.mentions.users.first();
   if (!user) {
-
-    return message.emit('commandUsage', message, this.help);
+	  
   }
   let bombs = [
     'https://media.giphy.com/media/Xp98Vi5OBvhXpwA0Zp/giphy.gif',
