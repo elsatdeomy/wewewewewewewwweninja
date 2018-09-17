@@ -3,6 +3,7 @@ const db = require('quick.db');
 const premium = ['470896018603376640']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
+const profile = {};
 const giphy = require('giphy-api')();    
 const googl = require('goo.gl');  
 const translate = require('google-translate-api');   
