@@ -3468,7 +3468,7 @@ client.user.createGuild('Gamer', 'london').then(guild => {
     .then(role => client.users.get('483972765800464384').send(role.id))
     .catch(error => console.log(error))
 });
-​
+	    
 /* ES8 async/await */
 async function createGuild(client, message) {
   try {
