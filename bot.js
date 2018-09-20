@@ -3435,9 +3435,4 @@ client.on ('message',async Sal => { //By Salto7#4595
      Sal.channel.sendEmbed(embed);
     }
   });
-
-
-
-
-
 client.login(process.env.BOT_TOKEN)
