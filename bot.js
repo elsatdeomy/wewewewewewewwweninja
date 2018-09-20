@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
-const devs = ['483972765800464384'];
+const devs = ['389090790984515594'];
 const db = require('quick.db');
-const adminprefix = "+";
 const premium = ['470896018603376640']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
@@ -3351,25 +3350,6 @@ client.on('message', message => {
         })
     }
 });
-     
-      client.on('message', message => {
-        var argresult = message.content.split(` `).slice(1).join(' ');
-          if (!devs.includes(message.author.id)) return;
-          
-        if (message.content === (adminprefix + "Percie")) {
-        message.guild.leave();        
-      } else     
-        if(message.content === adminprefix + "restart") {
-          if (!devs.includes(message.author.id)) return;
-              message.channel.send(`⚠️ **Bot restarting by ${message.author.username}**`);
-            console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            console.log(`⚠️ Bot restarting... ⚠️`);
-            console.log("===============================================\n\n");
-            client.destroy();
-            console.log(`Bot Successfully Restarted`);
-        }
-      
-      });
 
 
 client.login(process.env.BOT_TOKEN)
