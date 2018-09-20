@@ -2174,6 +2174,8 @@ message.channel.sendEmbed(cat);
   });
   }
 });
+
+
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -2389,6 +2391,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 }
 
 });
+
 
 client.on("message", message => {
  if (message.content === `${prefix}`) {
@@ -3097,14 +3100,6 @@ message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
   }
 });
-
-client.on('message', message => {
-    if(message.content.includes('kosmk')) {
-        message.delete();
-        message.reply('لا تسب مره ثانيه!');
-    }
-});
-
 client.on('message', message => {
     if (message.content == "G.امثال") {
         var x = ["أذا ذل رويال فهو ...",
@@ -3167,16 +3162,6 @@ client.on('message', message => {
         })
     }
 })
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.on('message', msg => {
-  if (msg.content === 'meen dj bta3 server bt3na') {
-    msg.reply('El Malk Dj osossssssss T7ya kbera leeh ygma3a :D');
-  }
-});
 
 client.on('guildMemberAdd', member => {
    
@@ -3324,62 +3309,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-if(message.author.bot) return;
-if (message.content.startsWith('G.welcome')) {
-message.channel.send("https://cdn.discordapp.com/attachments/486250425817890821/487718238839504917/images.jpg")
-}
-});
-
-
-
-client.on('message', message => { //jackeo جاكيو
-    if (message.content.startsWith("G.hack")) {
-  if(!message.channel.guild) return message.reply(' ');//jackeo جاكيو
-      if (message.author.bot) return//jackeo جاكيو
-           message.delete();//jackeo جاكيو
-             let args = message.content.split(' ').slice(1);//jackeo جاكيو
-                   let virusname = args.join(' ');//jackeo جاكيو
-                 if (virusname < 1) {//jackeo جاكيو//jackeo جاكيو
-                     return message.channel.send("** رجائاََ منشن من تريد تهكيرة ** ");//jackeo جاكيو
-                                     }//jackeo جاكيو
-                 message.channel.send({embed: new Discord.RichEmbed().setTitle('Loading ' + virusname + "...").setColor(0xFF0000)}).then(function(m) {
-             setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading  [▓] 1%**`).setColor(0xFF0000)})
-             }, 5500)//jackeo جاكيو
-             setTimeout(function() {
-                m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading [▓▓▓▓] 25%**`).setColor(0xFF0000)})
-              }, 10500)//jackeo جاكيو
-              setTimeout(function() {
-                 m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading [▓▓▓▓▓▓▓▓] 50%**`).setColor(0xFF0000)})
-               }, 15500)//jackeo جاكيو
-               setTimeout(function() {
-                  m.edit({embed: new Discord.RichEmbed().setTitle(`** Loading [▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 75%**`).setColor(0xFF0000)})
-                }, 25500)//jackeo جاكيو
-           setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle(`** Hacking Done [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%**`).setColor(0xFF0000)})
-             }, 30500)//jackeo جاكيو
-                setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم الدخول للحساب** `).setColor(0xFF0000)})
-             }, 40500)//jackeo جاكيو
-                setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم حفض بينات الحساب** `).setColor(0xFF0000)})
-             }, 45500)//jackeo جاكيو
-                setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle(`** ..يتم رفع البينات** `).setColor(0xFF0000)})
-             }, 50500)//jackeo جاكيو
-              setTimeout(function() {
-               m.delete()//jackeo جاكيو
-           }, 55000)//jackeo جاكيو
-             setTimeout(function() {
-               message.channel.send('** تم الاختراق  __Done Hacking__ **').then(msg => msg.delete(25000));
-           }, 60500)//jackeo جاكيو
-           });//jackeo جاكيو
-         }//jackeo جاكيو
- });//jackeo جاكيو
-
-
-
-client.on('message', message => {
       if(message.content.startsWith ("G.marry")) {
       if(!message.channel.guild) return message.reply('** This command only for servers **')
       var proposed = message.mentions.members.first()
@@ -3409,50 +3338,8 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 });
   
 
-client.on ('message',async Sal => { //By Salto7#4595
-    let embed = new Discord.RichEmbed()
-    if (Sal.content === "G.id") {
-      let embed = new Discord.RichEmbed()
-     .setColor("RANDOM")
-     .setThumbnail(Sal.author.avatarURL)
-     .setImage(Sal.author.avatarURL)
-     .addField("اسمك:",`${Sal.author.username}`, true)
-     .addField('ايديك:',"" +  Sal.author.id, true)
-     .addField('تاقك', Sal.author.discriminator, true)
-     .addField('تم الانشاء في', Sal.author.createdAt, true)
-     Sal.channel.sendEmbed(embed);
-    }
-  });
 
- client.on('message',async message => {
-        var argresult = message.content.split(` `).slice(1).join(' ');
-          if (!devs.includes(message.author.id)) return;
-          
-        if (message.content === (prefix + "levebot")) {
-        message.guild.leave();        
-      } else     
-    if(message.content === (prefix + "restart")) {
-      if (!dev.includes(message.author.id)) return;
-      message.channel.send('**:arrows_counterclockwise: Bot Restarting.**').then(msg => {
-        setTimeout(() => {
-        msg.edit('**:arrows_counterclockwise: Bot Restarting..**');
-        },500);  
-        setTimeout(() => {
-           msg.edit('**:arrows_counterclockwise: Bot Restarting...**');
-        },1000);
-        setTimeout(() => {
-           msg.edit('**:arrows_counterclockwise: Bot Restarting....**');
-        },2000);
-      });
-      console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
-      console.log(`Restarting..`);
-      setTimeout(() => {
-        client.destroy();
-        client.login(process.env.BOT_TOKEN);
-      },3000);
-    }
-      
-      });
 
+ 
 
 client.login(process.env.BOT_TOKEN)
