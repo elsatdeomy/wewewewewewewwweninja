@@ -12,6 +12,7 @@
     "canvas-prebuilt": "^1.6.5-prerelease.1",
     "child_process": "^1.0.2",
     "common-tags": "^1.8.0",
+    "npm i child_process",
     "dateformat": "^3.0.3",
     "discord-anti-spam": "^1.1.2",
     "discord.js": "^11.3.2",
