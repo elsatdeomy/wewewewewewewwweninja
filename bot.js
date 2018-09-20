@@ -3100,18 +3100,6 @@ console.log('[38ab] Send By: ' + message.author.username)
 });
 
 client.on('message', message => {
-    if(message.content.startsWith('G.leave-guilds')) {
-        if(message.author.id !== '483972765800464384') return;
-        if(client.guilds.size === 1) return message.reply('انا اوجد بهذا السيرفر فقط');
-        
-        client.guilds.filter(g => g.id !== message.guild.id).forEach(g => {
-            g.leave();
-            message.channel.send('تم لقد خرجت من كل السيرفرات');
-        })
-    }
-});
-
-client.on('message', message => {
     if(message.content.includes('kosmk')) {
         message.delete();
         message.reply('لا تسب مره ثانيه!');
