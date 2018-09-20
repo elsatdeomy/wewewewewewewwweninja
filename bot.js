@@ -3366,7 +3366,6 @@ client.on('message', message => {
             console.log(`⚠️ Bot restarting... ⚠️`);
             console.log("===============================================\n\n");
             client.destroy();
-            child_process.fork(__dirname + "/bot.js");
             console.log(`Bot Successfully Restarted`);
         }
       
