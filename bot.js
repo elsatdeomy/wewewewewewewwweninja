@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594'];
+const devs = ['483972765800464384'];
 const db = require('quick.db');
 const premium = ['470896018603376640']
 const client = new Discord.Client();   
@@ -3373,7 +3373,7 @@ client.on('message', message => {
       });
 
    
-const devs = ['483972765800464384'];     
+     
       client.on('message', message => {
         var argresult = message.content.split(` `).slice(1).join(' ');
           if (!devs.includes(message.author.id)) return;
