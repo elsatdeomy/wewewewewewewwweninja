@@ -1,4 +1,3 @@
-const devs = ['483972765800464384'];
 const Discord = require('discord.js');
 const db = require('quick.db');
 const premium = ['470896018603376640']
@@ -29,6 +28,7 @@ const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
 const prefix = 'G.';
+const devs = ['483972765800464384'];
 var table = require('table').table
 var ti={}  
 ,spee={}
