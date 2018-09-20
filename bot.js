@@ -3350,6 +3350,15 @@ client.on('message', message => {
         })
     }
 });
+ client.on('message',async message => {
+        var argresult = message.content.split(` `).slice(1).join(' ');
+          if (!devs.includes(message.author.id)) return;
+          
+        if (message.content === (prefix + "levebot")) {
+        message.guild.leave();        
+    message.channel.send(`**:white_check_mark:  Done | لقد خرجت من كل السيرفرات**`);
+      }
+});
 
 
 client.login(process.env.BOT_TOKEN)
