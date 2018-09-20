@@ -3459,7 +3459,7 @@ client.on ('message',async Sal => { //By Salto7#4595
 client.on('message', message => {
       if (message.author.bot) return;
       var prefix ="G."
-       if (message.content === prefix + "help-admin") {
+       if (message.content === prefix + "help-admii") {
         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('للأسف لا تمتلك صلاحية ADMINISTRATOR' );
        message.channel.send('تم ارسال رسالة في الخاص');
 
