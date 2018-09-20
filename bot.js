@@ -3437,25 +3437,7 @@ client.on ('message',async Sal => { //By Salto7#4595
   });
 
 
- client.on('message',async message => {
-    if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "483972765800464384") return message.reply('هاذا الامر خاص فقط بصاحب البوت وشكرآ.');
-        message.channel.send('**تم بدا الريستارت.**').then(msg => {
-            setTimeout(() => {
-               msg.edit('**انتضر..**');
-            },1000);
-            setTimeout(() => {
-               msg.edit('**تم الانتهاء...**');
-            },2000);
-        });
-        console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
-        console.log(`Restarting..`);
-        setTimeout(() => {
-            client.destroy();
-            client.login('توكن بوتك');
-        },3000);
-    }
-});
+
 
 
 client.login(process.env.BOT_TOKEN)
