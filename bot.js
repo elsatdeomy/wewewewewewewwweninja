@@ -3456,34 +3456,4 @@ client.on ('message',async Sal => { //By Salto7#4595
     }
   });
 
-client.on('message', message => {
-      if (message.author.bot) return;
-      var prefix ="G."
-       if (message.content === prefix + "help-admii") {
-        if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('للأسف لا تمتلك صلاحية ADMINISTRATOR' );
-       message.channel.send('تم ارسال رسالة في الخاص');
-
-  [❖═════اومر ادمن═══════❖]
-  ❖ #kick <mention > ➾  kickلي اعطاء شخص
-
-  ❖ G.setvoice  لي انشاء روم فويس اونلاين
-  
-  ❖ G.ban <mention> ➾ لي اعطاء شخص بان
-  
-  ❖ G.unban <mention> ➾ لي فك بان عن شخص
-  
-  ❖ G.clear ➾ لي مسح الشات
-  
-  ❖ #mute <mention> ➾ لي اعطاء ميوت لي شخص
-  
-  ❖ G.ct <name> ➾ لي انشاء روم كتبي
-  
-  ❖ G.cv <name> ➾لي انشاء روم صوتي
-  
-  ❖ G.bc <message>  ➾ لي ارسال رسالة لي كل الاعضاء
-  **);
-
-      }
-  });
-
 client.login(process.env.BOT_TOKEN)
