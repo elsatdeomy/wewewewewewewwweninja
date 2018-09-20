@@ -3265,26 +3265,6 @@ client.on('guildMemberAdd', member => {
       }
       });
 
-const devs = ['402043862480322562', '443696811421466624'];     
-      client.on('message', message => {
-        var argresult = message.content.split(` `).slice(1).join(' ');
-          if (!devs.includes(message.author.id)) return;
-          
-        if (message.content === (adminprefix + "Percie")) {
-        message.guild.leave();        
-      } else     
-        if(message.content === adminprefix + "restart") {
-          if (!devs.includes(message.author.id)) return;
-              message.channel.send(`⚠️ **Bot restarting by ${message.author.username}**`);
-            console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            console.log(`⚠️ Bot restarting... ⚠️`);
-            console.log("===============================================\n\n");
-            client.destroy();
-            child_process.fork(__dirname + "/bot.js");
-            console.log(`Bot Successfully Restarted`);
-        }
-      
-      });
 
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
@@ -3455,5 +3435,27 @@ client.on ('message',async Sal => { //By Salto7#4595
      Sal.channel.sendEmbed(embed);
     }
   });
+
+
+ client.on('message',async message => {
+    if(message.content.startsWith(prefix + "restart")) {
+        if(message.author.id !== "483972765800464384") return message.reply('هاذا الامر خاص فقط بصاحب البوت وشكرآ.');
+        message.channel.send('**تم بدا الريستارت.**').then(msg => {
+            setTimeout(() => {
+               msg.edit('**انتضر..**');
+            },1000);
+            setTimeout(() => {
+               msg.edit('**تم الانتهاء...**');
+            },2000);
+        });
+        console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
+        console.log(`Restarting..`);
+        setTimeout(() => {
+            client.destroy();
+            client.login('توكن بوتك');
+        },3000);
+    }
+});
+
 
 client.login(process.env.BOT_TOKEN)
