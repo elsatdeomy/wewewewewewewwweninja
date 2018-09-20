@@ -3463,10 +3463,6 @@ client.on('message', message => {
         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('للأسف لا تمتلك صلاحية ADMINISTRATOR' );
        message.channel.send('تم ارسال رسالة في الخاص');
 
-
-
-
-   message.author.sendMessage(**
   [❖═════اومر ادمن═══════❖]
   ❖ #kick <mention > ➾  kickلي اعطاء شخص
 
