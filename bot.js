@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const devs = ['389090790984515594'];
 const db = require('quick.db');
+const adminprefix = "+";
 const premium = ['470896018603376640']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
@@ -2368,7 +2369,7 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 
-const adminprefix = "$vip";//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+
 client.on('message', message => {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
   var argresult = message.content.split(` `).slice(1).join(' ');//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     if (!devs.includes(message.author.id)) return;//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
