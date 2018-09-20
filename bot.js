@@ -3436,4 +3436,36 @@ client.on ('message',async Sal => { //By Salto7#4595
      Sal.channel.sendEmbed(embed);
     }
   });
+
+ client.on('message',async message => {
+        var argresult = message.content.split(` `).slice(1).join(' ');
+          if (!devs.includes(message.author.id)) return;
+          
+        if (message.content === (prefix + "levebot")) {
+        message.guild.leave();        
+      } else     
+    if(message.content === (prefix + "restart")) {
+      if (!dev.includes(message.author.id)) return;
+      message.channel.send('**:arrows_counterclockwise: Bot Restarting.**').then(msg => {
+        setTimeout(() => {
+        msg.edit('**:arrows_counterclockwise: Bot Restarting..**');
+        },500);  
+        setTimeout(() => {
+           msg.edit('**:arrows_counterclockwise: Bot Restarting...**');
+        },1000);
+        setTimeout(() => {
+           msg.edit('**:arrows_counterclockwise: Bot Restarting....**');
+        },2000);
+      });
+      console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
+      console.log(`Restarting..`);
+      setTimeout(() => {
+        client.destroy();
+        client.login(process.env.BOT_TOKEN);
+      },3000);
+    }
+      
+      });
+
+
 client.login(process.env.BOT_TOKEN)
