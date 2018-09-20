@@ -1,3 +1,4 @@
+const devs = ['483972765800464384'];
 const Discord = require('discord.js');
 const db = require('quick.db');
 const premium = ['470896018603376640']
@@ -2174,7 +2175,6 @@ message.channel.sendEmbed(cat);
   });
   }
 });
-const devs = ['483972765800464384'];
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
