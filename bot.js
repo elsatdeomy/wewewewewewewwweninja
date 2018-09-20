@@ -3372,7 +3372,7 @@ client.on('message', message => {
       
       });
 
-   var adminprefix = "+";
+   
 const devs = ['483972765800464384'];     
       client.on('message', message => {
         var argresult = message.content.split(` `).slice(1).join(' ');
