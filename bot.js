@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
-const devs = ['483972765800464384'];
+const devs = ['389090790984515594'];
 const db = require('quick.db');
-const adminprefix = "+";
 const premium = ['470896018603376640']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
