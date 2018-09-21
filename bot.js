@@ -36,7 +36,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'G.help','Type G.help',`${client.users.size} Members`,'G.Iam Best','By: Ahmed | AhmedTube'];
+    var setGame = [`${client.guilds.size} Server`,'G.help','Type G.help',`${client.users.size} Members`,'G.inv','By: Hosam | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -47,7 +47,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/ahmedtube`);
+        client.user.setGame(setGame[i],`http://www.twitch.tv/barontube`);
     }, ms);
     console.log(` ╔═══╗──╔╗ |> Name: ${client.user.username}`);
  console.log(` ║╔═╗║──║║ |> Servers: ${client.guilds.size}`);
